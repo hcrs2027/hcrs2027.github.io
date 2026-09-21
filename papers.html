@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Accepted Papers - The 2nd Workshop on Human-Centered Recommender Systems</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="" />
+	<meta name="author" content="HCRS@TheWebConf 2026" />
+	<!-- css -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+	<link href="css/jcarousel.css" rel="stylesheet" />
+	<link href="css/flexslider.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet" />
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+	<style>
+		.paper-list {
+			list-style: none;
+			padding-left: 0;
+			counter-reset: paper-counter;
+		}
+
+		.paper-item {
+			counter-increment: paper-counter;
+			background: #fafbfc;
+			border-left: 4px solid #2d4a6b;
+			border-radius: 4px;
+			padding: 18px 22px 18px 22px;
+			margin-bottom: 18px;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+			transition: box-shadow 0.25s ease, transform 0.25s ease;
+			position: relative;
+		}
+
+		.paper-item:hover {
+			box-shadow: 0 4px 12px rgba(45, 74, 107, 0.15);
+			transform: translateY(-1px);
+		}
+
+		.paper-item::before {
+			content: counter(paper-counter);
+			position: absolute;
+			top: 18px;
+			left: -18px;
+			width: 36px;
+			height: 36px;
+			background: #2d4a6b;
+			color: #fff;
+			font-weight: 700;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 14px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+		}
+
+		.paper-title {
+			color: #2d4a6b;
+			font-size: 17px;
+			font-weight: 600;
+			line-height: 1.45;
+			margin: 0 0 8px 0;
+		}
+
+		.paper-title a {
+			color: #2d4a6b;
+			text-decoration: none;
+		}
+
+		.paper-title a:hover {
+			color: #C6743B;
+			text-decoration: underline;
+		}
+
+		.paper-authors {
+			color: #555;
+			font-size: 14px;
+			line-height: 1.6;
+			margin-bottom: 8px;
+		}
+
+		.paper-links {
+			margin-top: 6px;
+		}
+
+		.paper-links a {
+			display: inline-block;
+			margin-right: 10px;
+			padding: 3px 10px;
+			background: #fff;
+			border: 1px solid #2d4a6b;
+			color: #2d4a6b;
+			border-radius: 3px;
+			font-size: 12px;
+			text-decoration: none;
+			transition: background 0.2s ease, color 0.2s ease;
+		}
+
+		.paper-links a:hover {
+			background: #2d4a6b;
+			color: #fff;
+		}
+
+		.section-header {
+			color: #2d4a6b;
+			font-weight: 700;
+			margin-top: 30px;
+			margin-bottom: 25px;
+			padding-bottom: 10px;
+			border-bottom: 2px solid #C6743B;
+			display: inline-block;
+		}
+
+		.session-meta {
+			color: #666;
+			font-size: 14px;
+			margin-bottom: 25px;
+		}
+
+		.papers-container {
+			padding-left: 25px;
+		}
+
+		.tag-oral {
+			display: inline-block;
+			background: #C6743B;
+			color: #fff;
+			font-size: 12px;
+			font-weight: 600;
+			padding: 2px 10px;
+			border-radius: 12px;
+			margin-left: 8px;
+			vertical-align: middle;
+		}
+
+		.tag-poster {
+			display: inline-block;
+			background: #5a8fb8;
+			color: #fff;
+			font-size: 12px;
+			font-weight: 600;
+			padding: 2px 10px;
+			border-radius: 12px;
+			margin-left: 8px;
+			vertical-align: middle;
+		}
+
+		.tag-best {
+			display: inline-block;
+			background: #f0ad00;
+			color: #4a3500;
+			font-size: 12px;
+			font-weight: 700;
+			padding: 2px 10px;
+			border-radius: 12px;
+			margin-left: 8px;
+			vertical-align: middle;
+		}
+
+		.paper-item.best-paper {
+			border-left-color: #f0ad00;
+			background: #fffdf5;
+		}
+
+		.paper-item.best-paper::before {
+			background: #f0ad00;
+			color: #4a3500;
+		}
+
+		.best-paper-comment {
+			margin-top: 12px;
+			padding: 12px 16px;
+			background: #fff8e6;
+			border: 1px solid #f3d98a;
+			border-radius: 4px;
+			color: #5c4a1a;
+			font-size: 13.5px;
+			line-height: 1.6;
+		}
+
+		.best-paper-comment strong {
+			color: #8a6d1a;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id="wrapper">
+		<!-- start header -->
+		<header>
+			<div class="navbar navbar-default navbar-static-top">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.html" style="color: #C6743B;">HCRS@TheWebConf 2026</a>
+					</div>
+					<div class="navbar-collapse collapse ">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="cfp.html">CfP</a></li>
+							<li><a href="committee.html">Committee</a></li>
+							<li><a href="program.html">Program</a></li>
+							<li class="active"><a href="papers.html">Accepted Papers</a></li>
+							<li><a href="keynote.html">Keynote</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Previous <b
+										class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="https://human-centeredrec.github.io/" target="_blank">1st
+											HCRS@TheWebConf 2025</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- end header -->
+		<section id="featured">
+			<!-- Static Image Hero -->
+			<div id="hero-image" class="hero-container">
+				<img src="https://www2026.thewebconf.org/images/Large-DubaiSkyline_BurjKhalifa_DET.jpg"
+					alt="Hero Image" />
+				<div class="hero-overlay">
+					<div class="hero-content">
+						<h1 class="hero-title">Accepted Papers</h1>
+					</div>
+				</div>
+			</div>
+			<!-- end hero image -->
+		</section>
+		<section id="content">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+
+						<!-- Intro -->
+						<div class="content-section" style="margin-top: 25px; margin-bottom: 30px;">
+							<p>We are pleased to announce the papers accepted to the
+								<strong>2nd Workshop on Human-Centered Recommender Systems
+									(HCRS@TheWebConf 2026)</strong>. The workshop will be held as
+								a half-day session on <strong>Tuesday, June 30, 2026,
+									10:00&ndash;13:30 (GST, UTC+4)</strong>,
+								<strong>online (meeting link to be announced)</strong>.
+								Congratulations to all authors!
+							</p>
+							<p>Submissions appear in the OpenReview venue:
+								<a href="https://openreview.net/group?id=ACM.org/TheWebConf/2026/Workshop/HCRS"
+									target="_blank" style="text-decoration: underline;">HCRS@TheWebConf 2026</a>.
+							</p>
+						</div>
+
+						<!-- Oral Presentations -->
+						<div class="content-section" style="margin-bottom: 50px;">
+							<h2 class="section-header">Oral Presentations<span class="tag-oral">Oral</span></h2>
+							<p class="session-meta">6 papers will be presented as oral talks during the
+								workshop.</p>
+
+							<div class="papers-container">
+								<ul class="paper-list">
+
+									<li class="paper-item">
+										<div class="paper-title">
+											<a href="https://openreview.net/forum?id=n1ZucFbqka"
+												target="_blank">Post-Training Fairness Control: A Single-Train
+												Framework for Dynamic Fairness in Recommendation</a>
+										</div>
+										<div class="paper-authors">Weixin Chen, Li Chen, Yuhan Zhao</div>
+										<div class="paper-links">
+											<a href="https://openreview.net/forum?id=n1ZucFbqka"
+												target="_blank">OpenReview</a>
+											<a href="https://openreview.net/attachment?id=n1ZucFbqka&amp;name=pdf"
+												target="_blank">PDF</a>
+										</div>
+									</li>
+
+									<li class="paper-item best-paper">
+										<div class="paper-title">
+											<a href="https://openreview.net/forum?id=e3rhckYI3I"
+												target="_blank">RecoWorld: Building Simulated Environments for
+												Agentic Recommender Systems</a><span class="tag-best">🏆 Best Paper</span>
+										</div>
+										<div class="paper-authors">Fei Liu, Xinyu Lin, Hanchao Yu, Mingyuan Wu,
+											Jianyu Wang, Qiang Zhang, Zhuokai Zhao, Yinglong Xia, Yao Zhang,
+											Weiwei Li, Mingze Gao, Qifan Wang, Lizhu Zhang, Benyu Zhang, Xiangjun
+											Fan</div>
+										<div class="paper-links">
+											<a href="https://openreview.net/forum?id=e3rhckYI3I"
+												target="_blank">OpenReview</a>
+											<a href="https://openreview.net/attachment?id=e3rhckYI3I&amp;name=pdf"
+												target="_blank">PDF</a>
+										</div>
+										<div class="best-paper-comment">
+											<strong>Award Citation.</strong> This paper presents RecoWorld, a
+											simulated environment framework that enables multi-turn interactions
+											between simulated users and agentic recommender systems. The core
+											contribution lies in its dual-view architecture where users provide
+											natural language instructions and the recommender learns to follow
+											them iteratively, shifting the evaluation paradigm from static
+											offline metrics toward dynamic, instruction-driven feedback. This
+											design philosophy resonates strongly with the spirit of HCRS, as it
+											treats user agency and long-term satisfaction as first-class
+											objectives rather than byproducts of engagement optimization. By
+											formulating the problem in a Gym-like RL framework with
+											retention-based reward signals, the work lays important groundwork
+											for the community to build recommender systems that are genuinely
+											responsive to human intent.
+										</div>
+									</li>
+
+									<li class="paper-item">
+										<div class="paper-title">
+											<a href="https://openreview.net/forum?id=ATRnACEawI"
+												target="_blank">STCRank: Spatio-temporal Collaborative Ranking
+												for Interactive Recommender System at Kuaishou E-shop</a>
+										</div>
+										<div class="paper-authors">Boyang Xia, Ruilin Bao, Hanjun Jiang, Jun Wang,
+											Wenwu Ou</div>
+										<div class="paper-links">
+											<a href="https://openreview.net/forum?id=ATRnACEawI"
+												target="_blank">OpenReview</a>
+											<a href="https://openreview.net/attachment?id=ATRnACEawI&amp;name=pdf"
+												target="_blank">PDF</a>
+										</div>
+									</li>
+
+									<li class="paper-item">
+										<div class="paper-title">
+											<a href="https://openreview.net/forum?id=vGScyjXgmx"
+												target="_blank">Orthogonal Meta-learning Boosted Bayesian
+												Optimization for Uncertain Multi-Objective Recommendation</a>
+										</div>
+										<div class="paper-authors">Hongxu Wang, Yingpeng Du, Zhu Sun, Lu Zhang,
+											Tiantian He, Yew-Soon Ong</div>
+										<div class="paper-links">
+											<a href="https://openreview.net/forum?id=vGScyjXgmx"
+												target="_blank">OpenReview</a>
+											<a href="https://openreview.net/attachment?id=vGScyjXgmx&amp;name=pdf"
+												target="_blank">PDF</a>
+										</div>
+									</li>
+
+									<li class="paper-item">
+										<div class="paper-title">
+											<a href="https://openreview.net/forum?id=GUsCHM9vdX"
+												target="_blank">From Aggregation to Selection: User-Validated
+												Distributed Social Recommendation</a>
+										</div>
+										<div class="paper-authors">Jingyuan Huang, Dan Luo, Zihe Ye, Weixin Chen,
+											Minghao Guo, Yongfeng Zhang</div>
+										<div class="paper-links">
+											<a href="https://openreview.net/forum?id=GUsCHM9vdX"
+												target="_blank">OpenReview</a>
+											<a href="https://openreview.net/attachment?id=GUsCHM9vdX&amp;name=pdf"
+												target="_blank">PDF</a>
+										</div>
+									</li>
+
+									<li class="paper-item">
+										<div class="paper-title">
+											<a href="https://openreview.net/forum?id=eqIoEwPHkO"
+												target="_blank">Human-Centered Agentic Orchestration for
+												Educational Recommendations: A Multi-Agent Framework Prioritizing
+												Learner Agency and Well-being</a>
+										</div>
+										<div class="paper-authors">Naina Chaturvedi, Ananda Gunawardena</div>
+										<div class="paper-links">
+											<a href="https://openreview.net/forum?id=eqIoEwPHkO"
+												target="_blank">OpenReview</a>
+											<a href="https://openreview.net/attachment?id=eqIoEwPHkO&amp;name=pdf"
+												target="_blank">PDF</a>
+										</div>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+						<!-- Poster Presentations -->
+						<div class="content-section" style="margin-bottom: 50px;">
+							<h2 class="section-header">Poster Presentations<span
+									class="tag-poster">Poster</span></h2>
+							<p class="session-meta">7 papers will be presented as posters during the workshop.
+							</p>
+
+							<div class="papers-container">
+								<ul class="paper-list">
+
+									<li class="paper-item">
+										<div class="paper-title">
+											<a href="https://openreview.net/forum?id=GHsEIRPCNq"
+												target="_blank">Fairness at a Glance: Can We Audit Model
+												Fairness Before Training Completes?</a>
+										</div>
+										<div class="paper-authors">Yuanhao Liu, Qi Cao, Huawei Shen, Xueqi Cheng
+										</div>
+										<div class="paper-links">
+											<a href="https://openreview.net/forum?id=GHsEIRPCNq"
+												target="_blank">OpenReview</a>
+											<a href="https://openreview.net/attachment?id=GHsEIRPCNq&amp;name=pdf"
+												target="_blank">PDF</a>
+										</div>
+									</li>
+
+									<li class="paper-item">
+										<div class="paper-title">
+											<a href="https://openreview.net/forum?id=us5uz5kNE5"
+												target="_blank">Evaluating LLM Recommendations Under Stress</a>
+										</div>
+										<div class="paper-authors">Mithun Rameshbabu, Kamalakar Karlapalem</div>
+										<div class="paper-links">
+											<a href="https://openreview.net/forum?id=us5uz5kNE5"
+												target="_blank">OpenReview</a>
+											<a href="https://openreview.net/attachment?id=us5uz5kNE5&amp;name=pdf"
+												target="_blank">PDF</a>
+										</div>
+									</li>
+
+									<li class="paper-item">
+										<div class="paper-title">
+											<a href="https://openreview.net/forum?id=VyYFdBnC6D"
+												target="_blank">Beyond Engagement: A Human-Centered Evaluation
+												Framework for LLM-Powered Recommender Systems</a>
+										</div>
+										<div class="paper-authors">Shrinivass Arunachalam Balasubramanian</div>
+										<div class="paper-links">
+											<a href="https://openreview.net/forum?id=VyYFdBnC6D"
+												target="_blank">OpenReview</a>
+											<a href="https://openreview.net/attachment?id=VyYFdBnC6D&amp;name=pdf"
+												target="_blank">PDF</a>
+										</div>
+									</li>
+
+									<li class="paper-item">
+										<div class="paper-title">
+											<a href="https://openreview.net/forum?id=Zc7f4PKgv3"
+												target="_blank">Unlocking Serendipity in Sequential
+												Recommendations</a>
+										</div>
+										<div class="paper-authors">Noriaki Kawamae</div>
+										<div class="paper-links">
+											<a href="https://openreview.net/forum?id=Zc7f4PKgv3"
+												target="_blank">OpenReview</a>
+											<a href="https://openreview.net/attachment?id=Zc7f4PKgv3&amp;name=pdf"
+												target="_blank">PDF</a>
+										</div>
+									</li>
+
+									<li class="paper-item">
+										<div class="paper-title">
+											<a href="https://openreview.net/forum?id=ks2J2phaPG"
+												target="_blank">Knowledge Graph Editing Model For Enhancing
+												Recommendation Systems</a>
+										</div>
+										<div class="paper-authors">Weixuan Sun, Yang Fang, Jiuyang Tang, Hao Xu,
+											Bin Ge</div>
+										<div class="paper-links">
+											<a href="https://openreview.net/forum?id=ks2J2phaPG"
+												target="_blank">OpenReview</a>
+											<a href="https://openreview.net/attachment?id=ks2J2phaPG&amp;name=pdf"
+												target="_blank">PDF</a>
+										</div>
+									</li>
+
+									<li class="paper-item">
+										<div class="paper-title">
+											<a href="https://openreview.net/forum?id=UzVPwfsrWQ"
+												target="_blank">ReaGAN: Node-as-Agent-Reasoning Graph Agentic
+												Network</a>
+										</div>
+										<div class="paper-authors">Minghao Guo, Xi Zhu, Haochen Xue, Chong Zhang,
+											Shuhang Lin, Jingyuan Huang, Ziyi Ye, Yongfeng Zhang</div>
+										<div class="paper-links">
+											<a href="https://openreview.net/forum?id=UzVPwfsrWQ"
+												target="_blank">OpenReview</a>
+											<a href="https://openreview.net/attachment?id=UzVPwfsrWQ&amp;name=pdf"
+												target="_blank">PDF</a>
+										</div>
+									</li>
+
+									<li class="paper-item">
+										<div class="paper-title">
+											<a href="https://openreview.net/forum?id=jUIkwj85f9"
+												target="_blank">Learning to Alleviate Familiarity Bias in Video
+												Recommendation</a>
+										</div>
+										<div class="paper-authors">Zheng Ren, Yi Wu, Jianan Lu, Acar Ary, Yiqu
+											Liu, Li Wei, Lukasz Heldt</div>
+										<div class="paper-links">
+											<a href="https://openreview.net/forum?id=jUIkwj85f9"
+												target="_blank">OpenReview</a>
+											<a href="https://openreview.net/attachment?id=jUIkwj85f9&amp;name=pdf"
+												target="_blank">PDF</a>
+										</div>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+						<!-- Best Paper Note -->
+						<div class="content-section" style="margin-bottom: 40px;">
+							<div
+								style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 15px 20px; border-radius: 4px;">
+								<strong style="color: #856404; font-size: 1.1em;">🏆 Best Paper Award:</strong>
+								<span style="color: #856404;"> Awarded to <strong>&ldquo;RecoWorld:
+									Building Simulated Environments for Agentic Recommender Systems&rdquo;</strong>
+									by Fei Liu, Xinyu Lin, Hanchao Yu, Mingyuan Wu, Jianyu Wang, Qiang Zhang,
+									Zhuokai Zhao, Yinglong Xia, Yao Zhang, Weiwei Li, Mingze Gao, Qifan Wang,
+									Lizhu Zhang, Benyu Zhang, and Xiangjun Fan. Congratulations to the
+									authors!</span>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div id="sub-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="copyright">
+								<p style="margin: 0; padding: 20px 0; font-size: 18px; color: #fff;">
+									HCRS@TheWebConf 2026
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div style="text-align: right; padding: 20px 0;">
+								<p style="margin: 0; font-size: 18px; color: #fff;">
+									A venue for discussing problems of<br> human-centered recommender systems
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+	<!-- javascript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.fancybox.pack.js"></script>
+	<script src="js/jquery.fancybox-media.js"></script>
+	<script src="js/jquery.flexslider.js"></script>
+	<script src="js/animate.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+
+</html>
