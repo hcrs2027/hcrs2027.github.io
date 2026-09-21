@@ -25,26 +25,26 @@ All images fetched on **2026-09-21** for the HCRS@WWW 2027 workshop website.
 
 | File | Status | Notes |
 |---|---|---|
-| `img/hero-dublin.jpg` | **Temporary placeholder** | Programmatically generated gradient using workshop brand colors (`#2d4a6b` → `#C6743B`), 1920×600 JPEG. Created because Wikimedia Commons was unreachable from the build machine (all `*.wikimedia.org` domains timed out). |
-| `img/hero-candidate-www2027-banner.jpg` | **Candidate, not wired up** | Downloaded from https://www2027.thewebconf.org/wp-content/uploads/2026/09/WebBanner-1-scaled.jpg (official WWW 2027 conference banner, 2560×640 → resized 1920×480). Handoff §6.3 lists this as a possible source but notes copyright belongs to the conference; **confirm usage rights with WWW 2027 web chair before wiring up**. |
+| `img/hero-dublin.jpg` | **Final** | Ha'penny Bridge, Dublin. Original: `Ha'penny_bridge_00209.jpg` (3520×2328, 5.97 MB) downloaded by user from Wikimedia Commons on 2026-09-21. Processed: resize to 1920 wide (→1920×1269), center-crop vertically to 1920×600, JPEG q=88 progressive (315.5 KB). |
 
-### TODO: Final hero image
+### License & Attribution
 
-The user chose "Wikimedia CC Dublin photo" as the hero source. When network
-access to Wikimedia Commons is restored:
+- **Author**: Chris Light
+- **License**: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+- **Source**: via Wikimedia Commons — file page: https://commons.wikimedia.org/wiki/File:Ha%27penny_bridge_00209.jpg
+- **Attribution placement**: footer of all 6 HTML pages (small centered text with links to file page and license), added by `_scripts/phase3d_attribution.py`
+- **CC BY-SA obligations met**: ✅ author credited, ✅ license named + linked, ✅ source indicated. Share-alike applies to adaptations — the crop/resize is a trivial mechanical transformation, not a creative derivative, so SA does not impose additional licensing on the website itself. If this interpretation is ever questioned, the safest fallback is to also license the hero crop under CC BY-SA 4.0 (does not affect the rest of the site).
 
-1. Search Commons for a CC-BY-SA or CC0 Dublin landmark photo (candidates:
-   Ha'penny Bridge, Trinity College Campanile, Custom House, Dublin skyline
-   from Liffey, Spire of Dublin).
-2. Download at ≥1920px wide.
-3. Crop/resize to 1920×600, save as `img/hero-dublin.jpg` (JPEG q≈82, ≤500 KB).
-4. Add attribution line to footer or this file per CC-BY-SA requirements.
-5. Delete `img/hero-candidate-www2027-banner.jpg` if not used.
+> ⚠️ **Verify file page URL**: Wikimedia was unreachable from the build machine,
+> so the file page URL above was constructed from the filename pattern. Confirm it
+> resolves to the exact image used before the site goes public (after 2026-10-12).
 
-Alternatively, if the WWW 2027 web chair confirms the official banner may be
-used, rename `img/hero-candidate-www2027-banner.jpg` → `img/hero-dublin.jpg`
-and adjust the hero container aspect ratio if needed (banner is 4:1, current
-placeholder is 3.2:1).
+### Removed candidates
+
+- `img/hero-candidate-www2027-banner.jpg` — deleted (user provided a properly
+  licensed Wikimedia image instead; no need to pursue conference banner rights).
+- Gradient placeholder — overwritten by the real photo at the same path
+  (`img/hero-dublin.jpg`), so no HTML changes were needed.
 
 ## Other Assets
 
