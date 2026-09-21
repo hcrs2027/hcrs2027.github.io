@@ -5,8 +5,7 @@ Licence under Creative Commons Attribution 3.0
 Do not remove the back-link in this web template 
 -------------------------------------------------------*/
 
-@import url('http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:400,600,700'); 
-@import url('font-awesome.css');  
+@import url('font-awesome.css');
 @import url('animate.css');
 
 body {
@@ -25,19 +24,26 @@ a:active {
 	clear:both;
 }
 
-h1,  h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
 	font-family:'Open Sans', Arial, sans-serif;
-	font-weight:700;
-	line-height:1.1em;
-	color:#333;
-	margin-bottom: 20px;
+	line-height:1.25em;
+	color:#2d4a6b;
+	margin-bottom: 18px;
 }
-h2, h3{
-	font-family:'Open Sans', Arial, sans-serif;
-	font-weight:700;
-	line-height:1.1em;
-	color:#C6743B;
-	margin-bottom: 20px;
+h1 { font-weight: 700; }
+h2 {
+	font-weight: 600;
+	font-size: 26px;
+	letter-spacing: -0.01em;
+}
+h3 { font-weight: 600; font-size: 20px; }
+h4, h5, h6 { font-weight: 700; }
+
+/* Orange as accent: 3px left rule on section headings inside .content-section */
+.content-section > h2 {
+	border-left: 3px solid #C6743B;
+	padding-left: 12px;
+	margin-left: -15px;
 }
  
 .container {
@@ -367,9 +373,7 @@ bottom: 35px; background-color: rgba(0, 0, 0, 0.7); color: #fff; margin: 0; padd
 	align-items: center;
 	justify-content: center;
 	padding: 40px 20px;
-	background-color: rgba(0, 0, 0, 0.5);
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
+	background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.6) 100%);
 }
 
 .hero-content {
@@ -378,25 +382,52 @@ bottom: 35px; background-color: rgba(0, 0, 0, 0.7); color: #fff; margin: 0; padd
 	max-width: 1200px;
 }
 
+.hero-eyebrow {
+	color: rgba(255, 255, 255, 0.85);
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	margin: 0 0 14px 0;
+}
+
 .hero-title {
 	color: #fff;
-	font-size: 3em;
+	font-family: 'Noto Serif', Georgia, serif;
+	font-size: 2.4em;
 	font-weight: 700;
-	letter-spacing: 2px;
-	text-transform: uppercase;
+	line-height: 1.25;
+	letter-spacing: 0;
+	text-transform: none;
 	margin: 0;
-	padding: 20px;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	padding: 12px 20px;
+	text-shadow: none;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 }
 
+.hero-lead {
+	color: rgba(255, 255, 255, 0.92);
+	font-size: 17px;
+	font-weight: 400;
+	margin: 16px 0 0 0;
+	letter-spacing: 0.01em;
+}
+.hero-lead a { color: #FFCE85; text-decoration: underline; }
+
 @media (max-width: 768px) {
 	.hero-title {
-		font-size: 1.5em;
-		padding: 15px;
-		letter-spacing: 1px;
+		font-size: 1.6em;
+		padding: 10px 15px;
 		line-height: 1.3em;
+	}
+	.hero-eyebrow {
+		font-size: 11px;
+		letter-spacing: 0.1em;
+	}
+	.hero-lead {
+		font-size: 14px;
 	}
 	.hero-overlay {
 		padding: 30px 15px;
@@ -436,11 +467,6 @@ text-align: center;
 border-radius: 50%;
 display: inline-table;
 }
-.skill-home h2 {
-padding-top: 20px;
-font-size: 36px;
-font-weight: 700;
-} 
 .testimonial-solid {
 padding: 50px 0 60px 0;
 margin: 0 0 0 0;
@@ -1371,7 +1397,7 @@ ul.social-network li {
 	padding-top:15px;
 	padding-bottom:15px;
 	margin:0;
-	background: #0D0D0D;
+	background: #2d4a6b;
 }
 
 #sub-footer p{
@@ -1735,3 +1761,97 @@ padding-top: 12px;
 }
 
  
+
+/* ==========================================================================
+   HCRS 2027 Path-A additions (2026-09-21)
+   ========================================================================== */
+
+/* A3 · Comfortable measure for body copy; committee grid opts out via --wide */
+.content-section {
+	max-width: 46em;
+	margin-left: auto;
+	margin-right: auto;
+}
+.content-section.content-section--wide {
+	max-width: none;
+}
+
+/* A5 · Flat callout replacing the 135deg gradient banner on index */
+.notice-proposed { margin: 30px 0; }
+.notice-proposed > div {
+	background: #fafaf7;
+	border-left: 4px solid #2d4a6b;
+	padding: 22px 28px;
+	border-radius: 2px;
+}
+.notice-proposed__eyebrow {
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #C6743B;
+	margin: 0 0 8px 0;
+}
+.notice-proposed__title {
+	font-size: 20px;
+	font-weight: 600;
+	color: #2d4a6b;
+	margin: 0 0 10px 0;
+	border: none;
+	padding: 0;
+}
+.notice-proposed__body {
+	color: #444;
+	margin: 0 0 12px 0;
+	line-height: 1.65;
+}
+.notice-proposed__body a { color: #2d4a6b; text-decoration: underline; }
+.notice-proposed__cta { margin: 0; }
+.notice-proposed__cta a {
+	color: #2d4a6b;
+	font-weight: 600;
+	text-decoration: none;
+	border-bottom: 1px solid #C6743B;
+	padding-bottom: 2px;
+}
+.notice-proposed__cta a:hover { color: #C6743B; }
+
+/* A6 · Important Dates with status icons + News changelog */
+.dates-list, .news-list { list-style: none; padding-left: 0; margin: 0; }
+.dates-list__item {
+	display: grid;
+	grid-template-columns: 24px 1fr auto;
+	align-items: baseline;
+	gap: 12px;
+	padding: 8px 0;
+	border-bottom: 1px solid #eee;
+}
+.dates-list__item:last-child { border-bottom: none; }
+.dates-list__icon { font-weight: 700; }
+.dates-list__item--star .dates-list__icon { color: #C6743B; }
+.dates-list__item--tba .dates-list__icon { color: #bbb; }
+.dates-list__item--done .dates-list__icon { color: #28a745; }
+.dates-list__item--tba .dates-list__value { color: #999; font-style: italic; }
+.dates-list__label { color: #333; }
+.dates-list__value { color: #555; font-variant-numeric: tabular-nums; text-align: right; }
+.dates-note { color: #888; font-size: 14px; margin-top: 14px; }
+
+.news-list li { padding: 6px 0; color: #444; }
+.news-list time {
+	font-family: 'Roboto Mono', Consolas, monospace;
+	font-size: 13px;
+	color: #C6743B;
+	margin-right: 4px;
+}
+
+/* A7 · Sub-page hero: shorter, no need for the full 500px bridge on inner pages */
+body:not(.page-home) .hero-container img {
+	max-height: 220px;
+	object-fit: cover;
+	object-position: center 40%;
+}
+body:not(.page-home) .hero-overlay { padding: 20px; }
+body:not(.page-home) .hero-title {
+	font-size: 1.8em;
+	padding: 8px 16px;
+}
