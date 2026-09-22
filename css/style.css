@@ -1816,8 +1816,8 @@ padding-top: 12px;
 }
 .notice-proposed__cta a:hover { color: #C6743B; }
 
-/* A6 · Important Dates with status icons + News changelog */
-.dates-list, .news-list { list-style: none; padding-left: 0; margin: 0; }
+/* A6 · Important Dates with status icons */
+.dates-list { list-style: none; padding-left: 0; margin: 0; }
 .dates-list__item {
 	display: grid;
 	grid-template-columns: 24px 1fr auto;
@@ -1835,14 +1835,6 @@ padding-top: 12px;
 .dates-list__label { color: #333; }
 .dates-list__value { color: #555; font-variant-numeric: tabular-nums; text-align: right; }
 .dates-note { color: #888; font-size: 14px; margin-top: 14px; }
-
-.news-list li { padding: 6px 0; color: #444; }
-.news-list time {
-	font-family: 'Roboto Mono', Consolas, monospace;
-	font-size: 13px;
-	color: #C6743B;
-	margin-right: 4px;
-}
 
 /* A7 · Sub-page hero: shorter, no need for the full 500px bridge on inner pages */
 body:not(.page-home) .hero-container img {
