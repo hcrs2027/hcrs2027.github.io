@@ -15,6 +15,7 @@ All images fetched on **2026-09-21** for the HCRS@WWW 2027 workshop website.
 | `renzhaochun.png` | Zhaochun Ren | Reused from 2026 site | Original organizer photo (was 2026 keynote); no change |
 | `chenli.jpeg` | Li Chen | Reused from 2026 site | Original organizer photo (was 2026 keynote); no change |
 | `ofey.jpg` | Fei Sun | Compressed from 2026 site's `ofey.png` (3.0 MB → 24.7 KB) | Original 1800×2520 PNG center-cropped to square, resized 400×400, JPEG q=88. |
+| `weilunchen.jpg` | Weilun Chen | https://ch3nweilun.github.io/profile.jpg | Personal homepage of the organizer (M.S. student, ICT CAS). Original 295×413 portrait, cropped square with slight upward bias (face-centered), resized 200×200, JPEG q=88 (7.7 KB). Added 2026-09-22 per user request — **note: deviates from handoff §2 item 9 / §3.3 item 3, which said 2027 has no Student Organizers category; user opted to add Weilun Chen directly to Organizing Committee instead of creating a separate section.** |
 
 > **Note**: Photos from personal/institutional homepages are used under the
 > standard academic convention that organizers' publicly posted portraits may
