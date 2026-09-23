@@ -17,6 +17,8 @@ All images fetched on **2026-09-21** for the HCRS@WWW 2027 workshop website.
 | `ofey.jpg` | Fei Sun | Compressed from 2026 site's `ofey.png` (3.0 MB → 24.7 KB) | Original 1800×2520 PNG center-cropped to square, resized 400×400, JPEG q=88. |
 | `weilunchen.jpg` | Weilun Chen | https://ch3nweilun.github.io/profile.jpg | Personal homepage of the organizer (M.S. student, ICT CAS). Original 295×413 portrait, cropped square with slight upward bias (face-centered), resized 200×200, JPEG q=88 (7.7 KB). Added 2026-09-22 per user request — **note: deviates from handoff §2 item 9 / §3.3 item 3, which said 2027 has no Student Organizers category; user opted to add Weilun Chen directly to Organizing Committee instead of creating a separate section.** |
 
+**Update 2026-09-22**: Weilun Chen was removed from the Organizing Committee sections of `index.html` / `committee.html` at the user's request; the site now credits him in the page footers ("Website by Weilun Chen") instead. `weilunchen.jpg` was deleted from the repo on 2026-09-23 (unreferenced; still retrievable from git history if ever needed).
+
 > **Note**: Photos from personal/institutional homepages are used under the
 > standard academic convention that organizers' publicly posted portraits may
 > appear on the workshop site they organize. If any organizer requests removal
@@ -26,26 +28,25 @@ All images fetched on **2026-09-21** for the HCRS@WWW 2027 workshop website.
 
 | File | Status | Notes |
 |---|---|---|
-| `img/hero-dublin.jpg` | **Final** | Ha'penny Bridge, Dublin. Original: `Ha'penny_bridge_00209.jpg` (3520×2328, 5.97 MB) downloaded by user from Wikimedia Commons on 2026-09-21. Processed: resize to 1920 wide (→1920×1269), center-crop vertically to 1920×600, JPEG q=88 progressive (315.5 KB). |
+| `img/hero-beckett-bridge.jpg` | **Final** | Samuel Beckett Bridge, Dublin. Original: `Samuel_Beckett_Bridge_20160818.jpg` (1920×1280, 362.7 KB) provided by user from Wikimedia Commons on 2026-09-23. Processed: vertical crop to 1920×600 (3.2:1, 40% position bias), JPEG q=88 progressive (163.7 KB). Replaces `hero-dublin.jpg` per user request. |
 
 ### License & Attribution
 
-- **Author**: Chris Light
+- **Author**: Suicasmo
 - **License**: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
-- **Source**: via Wikimedia Commons — file page: https://commons.wikimedia.org/wiki/File:Ha%27penny_bridge_00209.jpg
-- **Attribution placement**: footer of all 6 HTML pages (small centered text with links to file page and license), added by `_scripts/phase3d_attribution.py`
+- **Source**: via Wikimedia Commons — file page: https://commons.wikimedia.org/wiki/File:Samuel_Beckett_Bridge_20160818.jpg
+- **Attribution placement**: footer of all 6 HTML pages (small centered text with links to file page and license)
 - **CC BY-SA obligations met**: ✅ author credited, ✅ license named + linked, ✅ source indicated. Share-alike applies to adaptations — the crop/resize is a trivial mechanical transformation, not a creative derivative, so SA does not impose additional licensing on the website itself. If this interpretation is ever questioned, the safest fallback is to also license the hero crop under CC BY-SA 4.0 (does not affect the rest of the site).
 
-> ⚠️ **Verify file page URL**: Wikimedia was unreachable from the build machine,
-> so the file page URL above was constructed from the filename pattern. Confirm it
-> resolves to the exact image used before the site goes public (after 2026-10-12).
+> ⚠️ **Verify file page URL**: constructed from the filename pattern the user provided
+> (`Samuel_Beckett_Bridge_20160818.jpg`). Confirm it resolves to the exact image
+> used before the site goes public.
 
 ### Removed candidates
 
+- `img/hero-dublin.jpg` — replaced by `img/hero-beckett-bridge.jpg` on 2026-09-23 (user requested the Samuel Beckett Bridge photo); old file deleted from the repo.
 - `img/hero-candidate-www2027-banner.jpg` — deleted (user provided a properly
   licensed Wikimedia image instead; no need to pursue conference banner rights).
-- Gradient placeholder — overwritten by the real photo at the same path
-  (`img/hero-dublin.jpg`), so no HTML changes were needed.
 
 ## Other Assets
 

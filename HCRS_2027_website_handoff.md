@@ -132,7 +132,7 @@
 
 ### 3.4 Program（`program.html`）
 
-1. 页面顶部描述改：`full-day session`、`in person`、会期 `May 3–7, 2027, Dublin, Ireland`，**具体日期和时段标注 TBA / Tentative**。
+1. 页面顶部描述改：`full-day session`、`in person`、会期 `May 10–14, 2027, Dublin, Ireland`，**具体日期和时段标注 TBA / Tentative**。
 2. 时区标签从 `GST (UTC+4)` 改为 `IST (Irish Standard Time, UTC+1)`。⚠️ **"IST" 有三个国家共用，必须写成 "IST (Irish Standard Time, UTC+1)"**，不要裸写 IST。
 3. 排期表换成第 4.10 节的 12 行。
 4. **删掉 2026 的 `Oral Presentation Order` 表**，或改成占位。
@@ -217,7 +217,7 @@
 - **Workshop paper submission:** January 4, 2027
 - **Paper acceptance notification:** February 1, 2027
 - **Camera-ready submission:** February 16, 2027
-- **Workshop date:** during **May 3–7, 2027**, Dublin, Ireland — full-day, in person（**具体日期与时段待定 / TBA**）
+- **Workshop date:** during **May 10–14, 2027**, Dublin, Ireland — full-day, in person（**具体日期与时段待定 / TBA**）
 
 Timezone note:
 > TIMEZONE: Anywhere On Earth (UTC-12) for paper deadlines; session times will be announced in IST (Irish Standard Time, UTC+1).
