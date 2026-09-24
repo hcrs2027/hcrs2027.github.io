@@ -111,7 +111,7 @@ header .navbar-collapse  ul.navbar-nav {
 
 header .navbar-default{
     background-color: #fff;
-	border-bottom: 2px solid #2d4a6b;
+	border-bottom: none;
 }
 
 header .nav li a:hover,
@@ -1806,4 +1806,11 @@ body:not(.page-home) .hero-overlay { padding: 20px; }
 body:not(.page-home) .hero-title {
 	font-size: 1.8em;
 	padding: 8px 16px;
+}
+
+/* A8 · Home hero: cap the full-frame photo so the Overview text peeks above the fold */
+body.page-home .hero-container img {
+	max-height: 600px;
+	object-fit: cover;
+	object-position: center 40%;
 }
