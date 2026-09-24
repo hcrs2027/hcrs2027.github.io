@@ -1776,46 +1776,6 @@ padding-top: 12px;
 	max-width: none;
 }
 
-/* A5 · Flat callout replacing the 135deg gradient banner on index */
-.notice-proposed { margin: 30px 0; }
-.notice-proposed > div {
-	background: #fafaf7;
-	border-left: 4px solid #2d4a6b;
-	padding: 22px 28px;
-	border-radius: 2px;
-}
-.notice-proposed__eyebrow {
-	font-size: 12px;
-	font-weight: 600;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-	color: #C6743B;
-	margin: 0 0 8px 0;
-}
-.notice-proposed__title {
-	font-size: 20px;
-	font-weight: 600;
-	color: #2d4a6b;
-	margin: 0 0 10px 0;
-	border: none;
-	padding: 0;
-}
-.notice-proposed__body {
-	color: #444;
-	margin: 0 0 12px 0;
-	line-height: 1.65;
-}
-.notice-proposed__body a { color: #2d4a6b; text-decoration: underline; }
-.notice-proposed__cta { margin: 0; }
-.notice-proposed__cta a {
-	color: #2d4a6b;
-	font-weight: 600;
-	text-decoration: none;
-	border-bottom: 1px solid #C6743B;
-	padding-bottom: 2px;
-}
-.notice-proposed__cta a:hover { color: #C6743B; }
-
 /* A6 · Important Dates with status icons */
 .dates-list { list-style: none; padding-left: 0; margin: 0; }
 .dates-list__item {
