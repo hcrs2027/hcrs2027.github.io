@@ -228,17 +228,17 @@ header ul.nav li {
 }
 
 header ul.nav li a {	
-	font-size:12px;
+	font-size:15px;
 	border:none;
-	font-weight:700;
-	text-transform:uppercase;
+	font-weight:600;
+	text-transform:none;
 }
 
 header ul.nav li ul li a {	
-	font-size:12px;
+	font-size:14px;
 	border:none;
-	font-weight:300;
-	text-transform:uppercase;
+	font-weight:400;
+	text-transform:none;
 }
 
 
@@ -1654,6 +1654,43 @@ article img.pull-right, article .align-right{
 		width:156px;
 		margin:0 20px 0 0;
 	}	
+}
+
+@media (max-width: 991px) {
+	header .navbar-collapse.in {
+		max-height: calc(100vh - 110px);
+		overflow-y: auto !important;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	header .navbar-header {
+		float: none;
+	}
+	header .navbar-toggle {
+		display: block;
+	}
+	header .navbar-collapse.collapse {
+		display: none !important;
+	}
+	header .navbar-collapse.collapse.in {
+		display: block !important;
+	}
+	header .navbar-collapse ul.navbar-nav {
+		float: none;
+		margin: 18px 0 0;
+	}
+	header .navbar-nav > li {
+		float: none;
+		padding: 3px 0;
+	}
+	header .navbar-nav .open .dropdown-menu {
+		position: static;
+		float: none;
+		width: auto;
+		background: transparent;
+		box-shadow: none;
+	}
 }
 
 @media (max-width: 767px) {
