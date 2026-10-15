@@ -1878,15 +1878,6 @@ padding-top: 12px;
 	overflow-y: auto;
 }
 
-.page-toc__title {
-	margin: 0 0 16px 16px;
-	color: #857c72;
-	font-size: 11px;
-	font-weight: 700;
-	letter-spacing: 0.12em;
-	text-transform: uppercase;
-}
-
 .page-toc__toggle, .page-toc__toggle[hidden] {
 	display: none;
 }
@@ -1956,12 +1947,6 @@ padding-top: 12px;
 		position: static;
 		max-height: 70vh;
 	}
-	.page-toc__title {
-		margin: 14px 16px;
-	}
-	.page-toc:has(.page-toc__toggle:not([hidden])) .page-toc__title {
-		display: none;
-	}
 	.page-toc__toggle:not([hidden]) {
 		display: flex;
 		align-items: center;
@@ -1982,7 +1967,7 @@ padding-top: 12px;
 		width: 18px;
 		height: 18px;
 	}
-	.page-toc__toggle[aria-expanded="true"] svg {
+	.page-toc__toggle[aria-expanded="true"] .page-toc__chevron {
 		transform: rotate(180deg);
 	}
 	.page-toc__links {
